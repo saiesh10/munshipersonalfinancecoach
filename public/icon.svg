@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <!-- Brand Deep Green Rounded Container -->
+  <rect width="64" height="64" rx="16" fill="#0E5A44" />
+  
+  <!-- Subtle inner gradient highlight for depth -->
+  <rect width="64" height="64" rx="16" fill="url(#grad)" opacity="0.15" />
+  
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+  </defs>
+
+  <!-- Lucide BookOpenCheck Icon scaled and centered -->
+  <g transform="translate(14, 14) scale(1.5)" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z" />
+    <path d="m16 12 2 2 4-4" />
+    <path d="M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7v-2.3" />
+  </g>
+</svg>

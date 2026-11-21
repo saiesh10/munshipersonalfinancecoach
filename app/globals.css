@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: #FEF9EE;
+    --surface: #FFFFFF;
+    --border: #E7E2D8;
+    --ink: #14201B;
+    --muted: #5E6B64;
+    --faint: #8A948E;
+    --primary: #0E5A44;
+    --primary-hover: #0A4936;
+    --primary-tint: #E6F2EC;
+    --saffron: #E8890C;
+    --saffron-tint: #FDF1DD;
+    --danger: #C0392B;
+    --danger-tint: #FBEAE7;
+    --success: #1B7F5C;
+  }
+
+  html, body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Force tabular numbers for all numerical and currency displays */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom interactive orb animation for Future You */
+@keyframes orb-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 24px rgba(14, 90, 68, 0.2), 0 0 48px rgba(232, 137, 12, 0.15);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 36px rgba(14, 90, 68, 0.35), 0 0 64px rgba(232, 137, 12, 0.25);
+  }
+}
+
+@keyframes orb-idle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(14, 90, 68, 0.15);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 28px rgba(14, 90, 68, 0.25);
+  }
+}
+
+.animate-orb-active {
+  animation: orb-pulse 2.8s ease-in-out infinite;
+}
+
+.animate-orb-idle {
+  animation: orb-idle 4s ease-in-out infinite;
+}
+
+/* Hide scrollbar while preserving scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
